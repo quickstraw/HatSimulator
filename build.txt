@@ -1,0 +1,3 @@
+displayName = Hat Simulator
+author = Quickstraw
+version = 0.1
