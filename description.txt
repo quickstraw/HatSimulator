@@ -1,1 +1,23 @@
-Hat Simulator is a pretty cool mod, it does...this. Modify this file with a description of your mod.
+Hat Simulator is a mod that mainly adds hats from Team Fortess 2. There are a couple other hats as well inspired by other games/whatever looks cool. Every hat added by this mod also has an Unusual version.
+
+[IMPORTANT]
+Please let me know if you find any issues with the mod.
+
+Features:
+        - 1 Town NPC
+        - 40+ vanity items
+
+Many cosmetic items added are inspired by Team Fortress 2 cosmetics or from other games. Hat Lock Boxes will drop after the the Eater of Worlds or Brain of Cthulu is killed.
+
+There are 4 Hat Lock Boxes that can be opened to obtain different sets of hats. A Hat Lock Box must be opened with a key bought from the Hat Salesman. There is a small chance to obtain a hat with an unusual effect after opening a Hat Lock Box.
+
+The Lock Boxes are called Lock Boxes instead of crates to match the Terraria naming scheme.
+
+Town NPCs:
+Hat Salesman     - Sells keys to open lockboxes.
+
+Currently Working On:
+Nothing in particular. Let me know if you have any ideas.
+I'll probably improve some of the sprites over time.
+
+Please go to my github if you want to add localizations to this mod! (Link is the mod homepage)

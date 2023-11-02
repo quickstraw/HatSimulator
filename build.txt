@@ -1,3 +1,7 @@
 displayName = Hat Simulator
 author = Quickstraw
-version = 0.1
+version = 1.0.0
+hideCode = true;
+hideResources = true;
+includeSource = false;
+homepage = https://github.com/quickstraw/HatSimulator

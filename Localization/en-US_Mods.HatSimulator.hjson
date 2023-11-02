@@ -50,7 +50,7 @@ Items: {
 	}
 
 	CroneDome: {
-		DisplayName: Crone Dome
+		DisplayName: Crone's Dome
 		Tooltip: ""
 	}
 
@@ -75,7 +75,7 @@ Items: {
 	}
 
 	OneWayTicket: {
-		DisplayName: One Way Ticket
+		DisplayName: One-Way Ticket
 		Tooltip: ""
 	}
 
@@ -115,7 +115,7 @@ Items: {
 	}
 
 	OlSnaggletooth: {
-		DisplayName: Ol Snaggletooth
+		DisplayName: Ol' Snaggletooth
 		Tooltip: ""
 	}
 
@@ -130,7 +130,7 @@ Items: {
 	}
 
 	SamurEye: {
-		DisplayName: Samur Eye
+		DisplayName: Samur-Eye
 		Tooltip: ""
 	}
 
@@ -165,7 +165,7 @@ Items: {
 	}
 
 	HeroHachimaki: {
-		DisplayName: Hero Hachimaki
+		DisplayName: Hero's Hachimaki
 		Tooltip: ""
 	}
 
@@ -185,12 +185,12 @@ Items: {
 	}
 
 	MediMask: {
-		DisplayName: Medi Mask
+		DisplayName: Medi-Mask
 		Tooltip: ""
 	}
 
 	SurgeonStahlhelm: {
-		DisplayName: Surgeon Stahlhelm
+		DisplayName: Surgeon's Stahlhelm
 		Tooltip: ""
 	}
 
@@ -250,22 +250,22 @@ Items: {
 	}
 
 	HatLockBox2: {
-		DisplayName: Hat Lock Box2
+		DisplayName: Hat Lock Box 2
 		Tooltip: ""
 	}
 
 	HatSupplyKey: {
-		DisplayName: Hat Supply Key
+		DisplayName: Hat Key
 		Tooltip: ""
 	}
 
 	HatSupplyLockBox: {
-		DisplayName: Hat Supply Lock Box
+		DisplayName: Hat Lock Box
 		Tooltip: ""
 	}
 
 	ReserveHatSupplyLockBox: {
-		DisplayName: Reserve Hat Supply Lock Box
+		DisplayName: Reserve Hat Lock Box
 		Tooltip: ""
 	}
 
@@ -280,12 +280,12 @@ Items: {
 	}
 
 	WinterHatSupplyKey: {
-		DisplayName: Winter Hat Supply Key
+		DisplayName: Winter Hat Key
 		Tooltip: ""
 	}
 
 	WinterHatSupplyLockBox: {
-		DisplayName: Winter Hat Supply Lock Box
+		DisplayName: Winter Hat Lock Box
 		Tooltip: ""
 	}
 
@@ -315,7 +315,7 @@ Items: {
 	}
 
 	UnusualOlSnaggletooth: {
-		DisplayName: Unusual Ol Snaggletooth
+		DisplayName: Unusual Ol' Snaggletooth
 		Tooltip: ""
 	}
 
@@ -330,7 +330,7 @@ Items: {
 	}
 
 	UnusualSamurEye: {
-		DisplayName: Unusual Samur Eye
+		DisplayName: Unusual Samur-Eye
 		Tooltip: ""
 	}
 
@@ -365,7 +365,7 @@ Items: {
 	}
 
 	UnusualHeroHachimaki: {
-		DisplayName: Unusual Hero Hachimaki
+		DisplayName: Unusual Hero's Hachimaki
 		Tooltip: ""
 	}
 
@@ -385,12 +385,12 @@ Items: {
 	}
 
 	UnusualMediMask: {
-		DisplayName: Unusual Medi Mask
+		DisplayName: Unusual Medi-Mask
 		Tooltip: ""
 	}
 
 	UnusualSurgeonStahlhelm: {
-		DisplayName: Unusual Surgeon Stahlhelm
+		DisplayName: Unusual Surgeon's Stahlhelm
 		Tooltip: ""
 	}
 
@@ -450,7 +450,7 @@ Items: {
 	}
 
 	UnusualCroneDome: {
-		DisplayName: Unusual Crone Dome
+		DisplayName: Unusual Crone's Dome
 		Tooltip: ""
 	}
 
@@ -475,7 +475,7 @@ Items: {
 	}
 
 	UnusualOneWayTicket: {
-		DisplayName: Unusual One Way Ticket
+		DisplayName: Unusual One-Way Ticket
 		Tooltip: ""
 	}
 
@@ -545,20 +545,20 @@ NPCs: {
 		DisplayName: Hat Salesman
 
 		TownNPCMood: {
-			Content: I am content.
-			NoHome: I hate not having a home.
-			FarFromHome: I am too far from home.
-			LoveSpace: I love having so much space.
-			DislikeCrowded: I dislike how crowded I am.
-			HateCrowded: I hate how crowded I am.
-			LoveBiome: I love {BiomeName}.
-			LikeBiome: I like {BiomeName}.
-			DislikeBiome: I dislike {BiomeName}.
-			HateBiome: I hate {BiomeName}.
-			LoveNPC: I love {NPCName}.
-			LikeNPC: I like {NPCName}.
-			DislikeNPC: I dislike {NPCName}.
-			HateNPC: I hate {NPCName}.
+			Content: It's a good day to buy some hats.
+			NoHome: I need somewhere to sell my goods.
+			LoveSpace: There's a lot of storage here!
+			FarFromHome: *BEEP* This area is unknown.
+			DislikeCrowded: I require more space.
+			HateCrowded: These people are driving away potential customers!
+			LikeBiome: "{BiomeName} is a great place to setup shop."
+			LoveBiome: The atmosphere of {BiomeName} is perfect for my shop! *BEEP*
+			DislikeBiome: *BEEP* {BiomeName} is too strange.
+			HateBiome: Leakage in {BiomeName} is worrisome.
+			LikeNPC: *BEEP* {NPCName} brings in the customers.
+			LoveNPC: All of {NPCName}'s tinkering makes me excited.
+			DislikeNPC: '''"I can't do business with {NPCName} around."'''
+			HateNPC: *BEEP* Please remove {NPCName}.
 			LikeNPC_Princess: I like {NPCName}.
 			Princess_LovesNPC: I like {NPCName}.
 		}
