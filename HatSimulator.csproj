@@ -8,6 +8,18 @@
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <ItemGroup>
+    <None Remove="Content\_temp\HatSupplyKey.png" />
+    <None Remove="Content\_temp\HatSupplyLockBox.png" />
+    <None Remove="Content\_temp\ReserveHatSupplyLockBox.png" />
+    <None Remove="Content\_temp\SpookyHatKey.png" />
+    <None Remove="Content\_temp\SpookyHatLockBox.png" />
+    <None Remove="Content\_temp\WinterHatSupplyKey.png" />
+    <None Remove="Content\_temp\WinterHatSupplyLockBox.png" />
+  </ItemGroup>
+  <ItemGroup>
     <PackageReference Include="tModLoader.CodeAssist" Version="0.1.*" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Content\_temp\" />
   </ItemGroup>
 </Project>
