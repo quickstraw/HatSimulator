@@ -94,76 +94,79 @@ namespace HatSimulator.HatEffects
             int yOffset = -65;
             float angle = 0;
 
-            if (storm)
+            if (!Main.gamePaused)
             {
-
-                float randX = Main.rand.NextFloat(-drawPlayer.width / 2, drawPlayer.width / 2);
-                float randY = -Main.rand.NextFloat(8, 10);
-
-                FauxDust newD;
-
-                if (modPlayer.unusual == AbnormalEffect.BlizzardyStorm && modPlayer.counter % 4 == 0)
-                {
-                    newD = new BlizzardyStormParticleFaux(drawInfo, new Vector2(randX, randY), texPath2, 1f);
-                    newD.front = true;
-                    dust.Add(newD);
-                }
-                else if (modPlayer.unusual == AbnormalEffect.StormyStorm && modPlayer.counter % 4 == 0)
-                {
-                    newD = new StormyStormParticleFaux(drawInfo, new Vector2(randX, randY), texPath2, 1f);
-                    newD.front = true;
-                    dust.Add(newD);
-                }
-
-                drawInfo.DrawDataCache.Add(StormDrawData(drawInfo, texPath, yOffset, angle));
-                drawInfo.DrawDataCache.Add(StormDrawData2(drawInfo, texPath, yOffset, angle));
-
-            }
-            if (energy)
-            {
-                for (int i = 0; i < dust.Count; i++)
+                if (storm)
                 {
 
-                    FauxDust d = dust[i];
-                    if (d.Player == drawPlayer)
+                    float randX = Main.rand.NextFloat(-drawPlayer.width / 2, drawPlayer.width / 2);
+                    float randY = -Main.rand.NextFloat(8, 10);
+
+                    FauxDust newD;
+
+                    if (modPlayer.unusual == AbnormalEffect.BlizzardyStorm && modPlayer.counter % 4 == 0)
                     {
-                        FauxDust newD = new PurpleEnergyFaux(d.drawInfo, d.Offset, d.texture, d.scale);
-                        newD.Color.R = 6;
-                        newD.Color.B = 6;
-                        newD.Color.G = 6;
-                        drawInfo.DrawDataCache.Add(newD.DrawData(drawInfo));
-                        //Main.playerDrawData.Add(FauxDustDrawData(drawInfo, newD, texPath, yOffset, angle));
+                        newD = new BlizzardyStormParticleFaux(drawInfo, new Vector2(randX, randY), texPath2, 1f);
+                        newD.front = true;
+                        dust.Add(newD);
+                    }
+                    else if (modPlayer.unusual == AbnormalEffect.StormyStorm && modPlayer.counter % 4 == 0)
+                    {
+                        newD = new StormyStormParticleFaux(drawInfo, new Vector2(randX, randY), texPath2, 1f);
+                        newD.front = true;
+                        dust.Add(newD);
+                    }
+
+                    drawInfo.DrawDataCache.Add(StormDrawData(drawInfo, texPath, yOffset, angle));
+                    drawInfo.DrawDataCache.Add(StormDrawData2(drawInfo, texPath, yOffset, angle));
+                }
+                if (energy)
+                {
+                    for (int i = 0; i < dust.Count; i++)
+                    {
+
+                        FauxDust d = dust[i];
+                        if (d.Player == drawPlayer)
+                        {
+                            FauxDust newD = new PurpleEnergyFaux(d.drawInfo, d.Offset, d.texture, d.scale);
+                            newD.Color.R = 6;
+                            newD.Color.B = 6;
+                            newD.Color.G = 6;
+                            drawInfo.DrawDataCache.Add(newD.DrawData(drawInfo));
+                            //Main.playerDrawData.Add(FauxDustDrawData(drawInfo, newD, texPath, yOffset, angle));
+                        }
                     }
                 }
-            }
-            if (flames)
-            {
-                float randX = Main.rand.NextFloat(-drawPlayer.width / 2, drawPlayer.width / 2);
-                float randY = -Main.rand.NextFloat(-9, 4);
-
-                FauxDust newD;
-
-                if (modPlayer.unusual == AbnormalEffect.BurningFlames)
+                if (flames)
                 {
-                    newD = new BurningFlamesFaux(drawInfo, new Vector2(randX, randY), texPath, 1f);
-                    newD.front = true;
-                    newD.alpha = 200;
-                    dust.Add(newD);
+                    float randX = Main.rand.NextFloat(-drawPlayer.width / 2, drawPlayer.width / 2);
+                    float randY = -Main.rand.NextFloat(-9, 4);
+
+                    FauxDust newD;
+
+                    if (modPlayer.unusual == AbnormalEffect.BurningFlames)
+                    {
+                        newD = new BurningFlamesFaux(drawInfo, new Vector2(randX, randY), texPath, 1f);
+                        newD.front = true;
+                        newD.alpha = 200;
+                        dust.Add(newD);
+                    }
+                    else
+                    {
+                        newD = new ScorchingFlamesFaux(drawInfo, new Vector2(randX, randY), texPath, 1f);
+                        newD.front = true;
+                        newD.alpha = 200;
+                        dust.Add(newD);
+                    }
                 }
-                else
+                if (ooze)
                 {
-                    newD = new ScorchingFlamesFaux(drawInfo, new Vector2(randX, randY), texPath, 1f);
-                    newD.front = true;
-                    newD.alpha = 200;
-                    dust.Add(newD);
+                    drawInfo.DrawDataCache.Add(OozeDrawData(drawInfo, texPath, yOffset, angle));
+                    drawInfo.DrawDataCache.Add(OozeDrawData2(drawInfo, texPath2, yOffset, angle));
+                    drawInfo.DrawDataCache.Add(OozeDrawData3(drawInfo, texPath3, yOffset, angle));
                 }
             }
-            if (ooze)
-            {
-                drawInfo.DrawDataCache.Add(OozeDrawData(drawInfo, texPath, yOffset, angle));
-                drawInfo.DrawDataCache.Add(OozeDrawData2(drawInfo, texPath2, yOffset, angle));
-                drawInfo.DrawDataCache.Add(OozeDrawData3(drawInfo, texPath3, yOffset, angle));
-            }
+            
 
             for (int i = 0; i < dust.Count; i++)
             {

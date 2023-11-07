@@ -46,7 +46,7 @@ namespace HatSimulator.HatEffects.UnusualLayerEffects
             velocity = new Vector2(vX, vY);
             alpha = 0;
             timer = 0;
-            clock = modPlayer.clock;
+            clock = (byte)(modPlayer.counter % 60);
             active = true;
             FindColor();
         }
@@ -66,7 +66,7 @@ namespace HatSimulator.HatEffects.UnusualLayerEffects
             velocity = new Vector2(vX, vY);
             alpha = 0;
             timer = 0;
-            clock = modPlayer.clock;
+            clock = (byte) (modPlayer.counter % 60);
             active = true;
             FindColor();
         }
@@ -78,7 +78,7 @@ namespace HatSimulator.HatEffects.UnusualLayerEffects
 
         public void SafeUpdate()
         {
-            byte playerClock = Player.GetModPlayer<HatSimulatorPlayer>().clock;
+            byte playerClock = (byte) (Player.GetModPlayer<HatSimulatorPlayer>().counter % 60);
             if (playerClock != clock)
             {
                 clock = playerClock;

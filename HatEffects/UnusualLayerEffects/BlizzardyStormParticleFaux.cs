@@ -13,9 +13,6 @@ namespace HatSimulator.HatEffects.UnusualLayerEffects
 {
     class BlizzardyStormParticleFaux : FauxDust
     {
-
-        int timer;
-
         public BlizzardyStormParticleFaux(PlayerDrawSet info, Vector2 offset, string texturePath, float scale) : base(info, offset, texturePath, scale)
         {
             OnSpawn();
@@ -50,6 +47,8 @@ namespace HatSimulator.HatEffects.UnusualLayerEffects
             {
                 active = false;
             }
+
+            //Main.NewText(timer);
 
             timer++;
         }

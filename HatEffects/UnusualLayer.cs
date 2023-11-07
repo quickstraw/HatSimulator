@@ -88,67 +88,70 @@ namespace HatSimulator.HatEffects
             int yOffset = -65;
             float angle = 0;
 
-            if (storm)
+            if (!Main.gamePaused)
             {
-                drawInfo.DrawDataCache.Add(StormDrawData(drawInfo, texPath, yOffset, angle));
-                drawInfo.DrawDataCache.Add(StormDrawData2(drawInfo, texPath, yOffset, angle));
-            }
-            if (energy)
-            {
-                Texture2D tex = Request<Texture2D>(texPath).Value;
-
-                if (modPlayer.unusual == AbnormalEffect.PurpleEnergy)
+                if (storm)
                 {
-                    dust.Add(new PurpleEnergyFaux(drawInfo, new Vector2(0.5f, 16), tex, 2f));
+                    drawInfo.DrawDataCache.Add(StormDrawData(drawInfo, texPath, yOffset, angle));
+                    drawInfo.DrawDataCache.Add(StormDrawData2(drawInfo, texPath, yOffset, angle));
+                }
+                if (energy)
+                {
+                    Texture2D tex = Request<Texture2D>(texPath).Value;
+
+                    if (modPlayer.unusual == AbnormalEffect.PurpleEnergy)
+                    {
+                        dust.Add(new PurpleEnergyFaux(drawInfo, new Vector2(0.5f, 16), tex, 2f));
+                    }
+                    else
+                    {
+                        dust.Add(new GreenEnergyFaux(drawInfo, new Vector2(0.5f, 16), tex, 2f));
+                    }
                 }
                 else
+                if (flames)
                 {
-                    dust.Add(new GreenEnergyFaux(drawInfo, new Vector2(0.5f, 16), tex, 2f));
-                }
-            }
-            else
-            if (flames)
-            {
-                Texture2D tex = Request<Texture2D>(texPath).Value;
+                    Texture2D tex = Request<Texture2D>(texPath).Value;
 
-                float randX = Main.rand.NextFloat(-drawPlayer.width / 2, drawPlayer.width / 2);
-                float randY = -Main.rand.NextFloat(-9, 4);
-
-                if (modPlayer.unusual == AbnormalEffect.BurningFlames)
-                {
-                    dust.Add(new BurningFlamesFaux(drawInfo, new Vector2(randX, randY), tex, 1f));
-                }
-                else
-                {
-                    dust.Add(new ScorchingFlamesFaux(drawInfo, new Vector2(randX, randY), tex, 1f));
-                }
-            }
-            else
-            if (cloud9)
-            {
-                if (modPlayer.counter % 30 == 0)
-                {
                     float randX = Main.rand.NextFloat(-drawPlayer.width / 2, drawPlayer.width / 2);
-                    float randY = -Main.rand.NextFloat(0, 8);
+                    float randY = -Main.rand.NextFloat(-9, 4);
 
-                    var currDust = new Cloud9Faux(drawInfo, new Vector2(randX, randY), texPath, 1f);
+                    if (modPlayer.unusual == AbnormalEffect.BurningFlames)
+                    {
+                        dust.Add(new BurningFlamesFaux(drawInfo, new Vector2(randX, randY), tex, 1f));
+                    }
+                    else
+                    {
+                        dust.Add(new ScorchingFlamesFaux(drawInfo, new Vector2(randX, randY), tex, 1f));
+                    }
+                }
+                else
+                if (cloud9)
+                {
+                    if (modPlayer.counter % 30 == 0)
+                    {
+                        float randX = Main.rand.NextFloat(-drawPlayer.width / 2, drawPlayer.width / 2);
+                        float randY = -Main.rand.NextFloat(0, 8);
 
-                    dust.Add(currDust);
+                        var currDust = new Cloud9Faux(drawInfo, new Vector2(randX, randY), texPath, 1f);
 
-                    FauxDust trail;
+                        dust.Add(currDust);
 
-                    trail = new Cloud9TrailFaux(drawInfo, currDust.Offset - currDust.velocity, texPath2, 1f);
-                    trail.velocity = currDust.velocity * 0.5f;
-                    trail.scale = 0.8f;
-                    dust.Add(trail);
-                    trail = new Cloud9TrailFaux(drawInfo, currDust.Offset - currDust.velocity, texPath2, 1f);
-                    trail.velocity = currDust.velocity * 0.25f;
-                    trail.scale = 0.4f;
-                    dust.Add(trail);
-                    trail = new Cloud9TrailFaux(drawInfo, currDust.Offset - currDust.velocity, texPath2, 1f);
-                    trail.velocity = currDust.velocity * 0.125f;
-                    trail.scale = 0.2f;
-                    dust.Add(trail);
+                        FauxDust trail;
+
+                        trail = new Cloud9TrailFaux(drawInfo, currDust.Offset - currDust.velocity, texPath2, 1f);
+                        trail.velocity = currDust.velocity * 0.5f;
+                        trail.scale = 0.8f;
+                        dust.Add(trail);
+                        trail = new Cloud9TrailFaux(drawInfo, currDust.Offset - currDust.velocity, texPath2, 1f);
+                        trail.velocity = currDust.velocity * 0.25f;
+                        trail.scale = 0.4f;
+                        dust.Add(trail);
+                        trail = new Cloud9TrailFaux(drawInfo, currDust.Offset - currDust.velocity, texPath2, 1f);
+                        trail.velocity = currDust.velocity * 0.125f;
+                        trail.scale = 0.2f;
+                        dust.Add(trail);
+                    }
                 }
             }
 
