@@ -7,7 +7,7 @@ Features:
         - 1 Town NPC
         - 40+ vanity items
 
-Many cosmetic items added are inspired by Team Fortress 2 cosmetics or from other games. Hat Lock Boxes will drop after the the Eater of Worlds or Brain of Cthulu is killed.
+Many cosmetic items added are inspired by Team Fortress 2 cosmetics or from other games. Hat Lock Boxes will drop from enemies after the the Eater of Worlds or Brain of Cthulu is killed.
 
 There are 4 Hat Lock Boxes that can be opened to obtain different sets of hats. A Hat Lock Box must be opened with a key bought from the Hat Salesman. There is a small chance to obtain a hat with an unusual effect after opening a Hat Lock Box.
 

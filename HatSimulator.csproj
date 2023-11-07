@@ -8,6 +8,7 @@
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <ItemGroup>
+    <None Remove="changelog.txt" />
     <None Remove="Content\_temp\HatSupplyKey.png" />
     <None Remove="Content\_temp\HatSupplyLockBox.png" />
     <None Remove="Content\_temp\ReserveHatSupplyLockBox.png" />
